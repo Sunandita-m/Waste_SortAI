@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSort AI ♻️ - Smart Waste Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background: #f5f7fa; min-height: 100vh; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        
+        .header { 
+            background: linear-gradient(to right, #2E7D32, #4CAF50); 
+            color: white; padding: 30px; 
+            border-radius: 10px; margin-bottom: 20px; 
+            text-align: center;
+        }
+        .header h1 { margin-bottom: 10px; font-size: 2.5em; }
+        .ai-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        
+        .input-section { 
+            background: white; padding: 20px; 
+            border-radius: 10px; margin-bottom: 20px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        #wasteInput { 
+            width: 100%; padding: 12px; 
+            border: 2px solid #ddd; border-radius: 5px; 
+            margin-bottom: 10px; font-size: 16px;
+        }
+        
+        button { 
+            background: linear-gradient(to right, #4CAF50, #2E7D32);
+            color: white; 
+            border: none; padding: 12px 24px; 
+            border-radius: 5px; cursor: pointer; 
+            font-size: 16px; width: 100%;
+            font-weight: bold;
+        }
+        button:hover { background: linear-gradient(to right, #388E3C, #1B5E20); }
+        
+        .result-section { 
+            background: white; padding: 20px; 
+            border-radius: 10px; display: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .instructions { 
+            background: #f9f9f9; padding: 15px; 
+            border-radius: 5px; margin: 10px 0; 
+            white-space: pre-line;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .impact { 
+            background: #E8F5E9; padding: 15px; 
+            border-radius: 5px; margin: 10px 0;
+            border-left: 4px solid #2E7D32;
+        }
+        
+        .ai-features {
+            background: #e3f2fd; padding: 15px;
+            border-radius: 5px; margin: 15px 0;
+            border-left: 4px solid #2196F3;
+        }
+        
+        .loading { text-align: center; padding: 20px; display: none; }
+        .spinner { 
+            border: 4px solid #f3f3f3; border-top: 4px solid #4CAF50; 
+            border-radius: 50%; width: 40px; height: 40px; 
+            animation: spin 1s linear infinite; margin: 0 auto 10px;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        .error { 
+            background: #FFEBEE; color: #F44336; 
+            padding: 10px; border-radius: 5px; 
+            margin: 10px 0; display: none;
+            border-left: 4px solid #F44336;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .recyclable { background: #E8F5E9; color: #2E7D32; }
+        .hazardous { background: #FFEBEE; color: #F44336; }
+        .wet-waste { background: #FFF3E0; color: #FF9800; }
+        
+        .agent-list {
+            list-style: none;
+            margin: 10px 0;
+        }
+        .agent-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .agent-list li:before {
+            content: "🤖";
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>♻️ EcoSort AI</h1>
+            <p>Advanced Waste Segregation with AI | SDG 12</p>
+            <div class="ai-badge">
+                <i class="fas fa-brain"></i> Powered by RAG & Agentic AI
+            </div>
+        </div>
+        
+        <div class="input-section">
+            <h3><i class="fas fa-search"></i> What waste item do you have?</h3>
+            <input type="text" id="wasteInput" 
+                   placeholder="e.g., plastic bottle, batteries, food waste..."
+                   onkeypress="if(event.key === 'Enter') classifyWaste()">
+            <button onclick="classifyWaste()">
+                <i class="fas fa-robot"></i> AI Classify Waste (RAG + Agentic AI)
+            </button>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>AI Agents analyzing waste item...</p>
+            </div>
+            
+            <div class="error" id="errorMessage"></div>
+            
+            <p style="margin-top: 15px; color: #666; font-size: 0.9em;">
+                <i class="fas fa-lightbulb"></i> Try: plastic bottle, batteries, food waste, glass bottle
+            </p>
+        </div>
+        
+        <div class="result-section" id="resultSection">
+            <!-- Results will be inserted here by JavaScript -->
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; color: #666; font-size: 0.9em;">
+            <p>1M1B AI for Sustainability Virtual Internship | IBM SkillsBuild & AICTE</p>
+            <p style="margin-top: 5px;">Advanced AI Features: RAG + Agentic Workflow</p>
+        </div>
+    </div>
+
+    <script>
+        async function classifyWaste() {
+            const input = document.getElementById('wasteInput').value.trim();
+            if (!input) {
+                showError('Please enter a waste item');
+                return;
+            }
+            
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('resultSection').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
+            
+            try {
+                const response = await fetch('/classify', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({query: input})
+                });
+                
+                const data = await response.json();
+                
+                if (!response.ok) {
+                    throw new Error(data.error || 'Error processing request');
+                }
+                
+                // Display results
+                displayResults(data);
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('resultSection').style.display = 'block';
+                
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                showError('Error: ' + error.message);
+            }
+        }
+        
+        function displayResults(data) {
+            const resultSection = document.getElementById('resultSection');
+            
+            // Determine category class
+            let categoryClass = 'category-badge ';
+            if (data.category.includes('Recyclable')) categoryClass += 'recyclable';
+            else if (data.category.includes('Hazardous')) categoryClass += 'hazardous';
+            else if (data.category.includes('Waste')) categoryClass += 'wet-waste';
+            
+            // Build results HTML
+            let html = `
+                <h3><i class="fas fa-clipboard-check"></i> Disposal Guide</h3>
+                
+                <div style="margin: 15px 0;">
+                    <p><strong>Item:</strong> <span style="font-size: 1.2em; font-weight: bold;">${data.item}</span></p>
+                    <p><strong>Category:</strong> <span class="${categoryClass}">${data.category}</span></p>
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <strong><i class="fas fa-list-ol"></i> Instructions:</strong>
+                    <div class="instructions">${data.instructions}</div>
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <strong><i class="fas fa-tips"></i> Tips:</strong>
+                    <ul style="margin: 10px 0 0 20px;">
+                        ${data.recycling_tips.map(tip => `<li>${tip}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="impact">
+                    <strong><i class="fas fa-leaf"></i> Environmental Impact:</strong>
+                    <p style="margin-top: 5px;">${data.environmental_impact}</p>
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <strong><i class="fas fa-map-marker-alt"></i> Local Facilities:</strong>
+                    <ul style="margin: 10px 0 0 20px;">
+                        ${data.local_facilities.map(facility => `<li>${facility}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+            
+            // Add AI Features if available
+            if (data.ai_enhancements) {
+                html += `
+                    <div class="ai-features">
+                        <h4 style="color: #1565c0;">
+                            <i class="fas fa-brain"></i> AI System Analysis
+                        </h4>
+                        <p><strong>🤖 RAG Insight:</strong> ${data.ai_enhancements.rag_insight || 'AI knowledge retrieved'}</p>
+                        <p><strong>⚙️ AI Methods:</strong> ${data.ai_enhancements.ai_methods || 'Advanced AI pipeline'}</p>
+                        
+                        <p><strong>🔄 Agentic Workflow:</strong></p>
+                        <ul class="agent-list">
+                            ${data.ai_enhancements.agentic_workflow.agents.map(agent => 
+                                `<li><strong>${agent.name}:</strong> ${agent.task}</li>`
+                            ).join('')}
+                        </ul>
+                        
+                        ${data.ai_enhancements.ai_components ? 
+                            `<p><strong>🧩 AI Components:</strong> ${data.ai_enhancements.ai_components.join(', ')}</p>` 
+                            : ''}
+                    </div>
+                `;
+            }
+            
+            resultSection.innerHTML = html;
+        }
+        
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

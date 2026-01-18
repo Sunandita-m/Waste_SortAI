@@ -1,0 +1,167 @@
+{
+  "plastic bottle": {
+    "category": "Recyclable",
+    "instructions": "1. 🧴 Remove cap and ring (different plastic type)\n2. 💦 Rinse thoroughly with water\n3. 🗜️ Crush to save space\n4. 📦 Place in DRY WASTE/RECYCLING bin\n\n🔍 Check recycling symbol (usually PET #1)\n📊 Recycling efficiency: 70-90%",
+    "tips": [
+      "Caps often HDPE (#2) - separate recycling",
+      "Labels can usually stay on",
+      "Colored bottles less valuable for recycling",
+      "Remove any residual liquids"
+    ],
+    "impact": "Recycling 1 kg plastic saves 3.4 kWh energy (power laptop for 50 hrs), reduces crude oil consumption by 1.5 kg"
+  },
+  "lithium battery": {
+    "category": "Hazardous",
+    "instructions": "⚠️ CRITICAL: DO NOT DISPOSE IN REGULAR WASTE\n1. 🔋 Check if battery is damaged/swollen\n2. 🎞️ Tape terminals with non-conductive tape\n3. 📦 Store in non-metal, ventilated container\n4. 🏢 Take to authorized e-waste/hazardous facility\n\n🚨 Never incinerate or puncture lithium batteries",
+    "tips": [
+      "Store in cool, dry place until disposal",
+      "Keep different battery types separate",
+      "Some retailers offer take-back programs",
+      "Consider rechargeable alternatives"
+    ],
+    "impact": "Prevents soil/water contamination from heavy metals. One battery can pollute 400 liters of water indefinitely"
+  },
+  "food waste": {
+    "category": "Wet Waste",
+    "instructions": "1. 🥡 Use compostable bags or newspaper lining\n2. 🍎 Keep separate from dry/recyclable waste\n3. 🕐 Dispose daily to prevent odor/pests\n4. 🌱 Ideal for home/community composting\n\n💡 Pro tip: Start small compost bin for kitchen",
+    "tips": [
+      "No plastic bags in compost - slows decomposition",
+      "Drain excess liquids before disposal",
+      "Meat/dairy not recommended for home compost",
+      "Balance greens (food) with browns (leaves/paper)"
+    ],
+    "impact": "Reduces methane emissions by 25x vs landfill. Creates natural fertilizer, improving soil health"
+  },
+  "glass bottle": {
+    "category": "Recyclable",
+    "instructions": "1. 🧼 Rinse clean, remove caps/lids\n2. 🎨 Separate by color if required (clear/green/brown)\n3. ⚠️ Handle broken glass with extreme care\n4. 📍 Place in GLASS recycling bin\n\n🔄 Glass is 100% recyclable without quality loss",
+    "tips": [
+      "Labels/glue usually okay - melts in process",
+      "Broken glass: wrap in newspaper, label clearly",
+      "No ceramics/light bulbs with bottle glass",
+      "Different colors have different recycling markets"
+    ],
+    "impact": "Recycling saves 30% energy vs new production. Every ton recycled saves 1.2 tons of raw materials"
+  },
+  "e-waste": {
+    "category": "E-Waste",
+    "instructions": "1. 📱 Factory reset & remove SIM/SD cards\n2. 🔋 Remove battery if possible (different recycling)\n3. 🚫 Do not dismantle - leave to professionals\n4. 🏢 Authorized e-waste recycler only\n\n💰 Many brands offer trade-in/take-back programs",
+    "tips": [
+      "Backup data before disposal",
+      "Check manufacturer recycling programs",
+      "Some charities accept working devices",
+      "Consider repair before replacement"
+    ],
+    "impact": "1 ton mobile phones yields 300g gold (vs 5g from gold ore). Proper recycling prevents toxic leakage"
+  },
+  "tetra pack": {
+    "category": "Recyclable (Special)",
+    "instructions": "1. 💦 Rinse thoroughly, flatten\n2. ✂️ Remove plastic caps separately\n3. 📍 Check local recycling acceptance\n4. ♻️ Special recycling bin if available\n\n🏭 Complex: 75% paper, 20% plastic, 5% aluminum",
+    "tips": [
+      "Some areas accept with plastics",
+      "Check for local drop-off points",
+      "Can be upcycled into crafts/stationery",
+      "Flattening saves 80% storage space"
+    ],
+    "impact": "Recycling saves 70% energy vs new production. Prevents deforestation (paper layer)"
+  },
+  "cooking oil": {
+    "category": "Hazardous",
+    "instructions": "🚫 NEVER pour down drain/toilet\n1. ❄️ Cool completely\n2. 🍼 Store in sealed non-plastic container\n3. 🏢 Take to collection center\n4. 🔄 Some areas convert to biodiesel\n\n💡 Small amounts: absorb with paper, compost",
+    "tips": [
+      "Reuse for non-food purposes if clean",
+      "Some restaurants accept for recycling",
+      "Mix with cat litter/sawdust for disposal",
+      "Prevent water treatment system damage"
+    ],
+    "impact": "1 liter oil contaminates 1 million liters water. Proper disposal protects aquatic ecosystems"
+  },
+  "newspaper": {
+    "category": "Recyclable",
+    "instructions": "1. 📰 Keep dry and clean\n2. 🎁 Remove plastic wrappers/bags\n3. 📦 Bundle with string or paper bag\n4. 📍 PAPER recycling bin\n\n🌳 Also excellent for composting if shredded",
+    "tips": [
+      "No food grease/stains (contaminates batch)",
+      "Magazines have different coating/process",
+      "Keep separate from cardboard",
+      "Can be reused for packaging/wrapping"
+    ],
+    "impact": "Recycling 1 ton saves 17 trees, 380 gallons oil, 4000 kWh energy, 7000 gallons water"
+  },
+  "medicine": {
+    "category": "Hazardous",
+    "instructions": "⚠️ DO NOT FLUSH or trash\n1. 💊 Remove from original containers\n2. 🚮 Mix with undesirable substance (coffee grounds)\n3. 🗑️ Seal in non-transparent container\n4. 🏥 Pharmacy/drug take-back program\n\n🔒 Protect personal information on labels",
+    "tips": [
+      "Check drug take-back events",
+      "Some pharmacies accept returns",
+      "Never share unused medicines",
+      "Follow expiration dates strictly"
+    ],
+    "impact": "Prevents water contamination, antibiotic resistance, accidental poisoning"
+  },
+  "plastic bags": {
+    "category": "Recyclable (Special)",
+    "instructions": "1. 🧼 Clean and dry completely\n2. 📦 Bundle together (like in a bag)\n3. 🏪 Many supermarkets have collection bins\n4. ♻️ Special plastic film recycling\n\n🔄 Better: REUSE or switch to cloth bags",
+    "tips": [
+      "Reuse as bin liners",
+      "Avoid thin single-use bags",
+      "Check local facility acceptance",
+      "Some convert to composite lumber"
+    ],
+    "impact": "Takes 500+ years to decompose. Recycling prevents ocean pollution harming marine life"
+  },
+  "batteries": {
+    "category": "Hazardous",
+    "instructions": "⚠️ DO NOT THROW IN REGULAR TRASH\n1. 🔋 Identify type (alkaline, lithium, rechargeable)\n2. 🎞️ Tape terminals to prevent short-circuit\n3. 📦 Store in non-metal container\n4. 🏢 Authorized battery recycling center\n\n🚨 Different types require different handling",
+    "tips": [
+      "Alkaline batteries (AA, AAA) less hazardous",
+      "Button batteries extremely dangerous if swallowed",
+      "Many electronic stores accept batteries",
+      "Consider rechargeable to reduce waste"
+    ],
+    "impact": "Prevents heavy metal contamination (lead, mercury, cadmium). One car battery can pollute 500,000L water"
+  },
+  "metal cans": {
+    "category": "Recyclable",
+    "instructions": "1. 🧼 Rinse clean, remove paper labels\n2. 🧲 Check type: aluminum (non-magnetic) vs steel (magnetic)\n3. 🗜️ Crush to save space\n4. 📍 METAL recycling bin\n\n💰 Aluminum has high scrap value",
+    "tips": [
+      "Aluminum cans: 100% recyclable, saves 95% energy",
+      "Steel cans: magnetic, often tin-coated",
+      "No aerosol cans in regular recycling",
+      "Check for local scrap dealers"
+    ],
+    "impact": "Recycling aluminum saves 95% energy vs new production. Every ton saves 4 tons of bauxite ore"
+  },
+  "clothing": {
+    "category": "Recyclable",
+    "instructions": "1. 🧺 Clean and dry items\n2. ♻️ Donate if usable (charities/thrift stores)\n3. 🧵 Separate natural (cotton, wool) and synthetic (polyester)\n4. 🗑️ Textile recycling bins for unwearable items\n\n🎨 Consider upcycling into rags/quilt",
+    "tips": [
+      "Repair before discarding",
+      "Some brands have take-back programs",
+      "Natural fibers can be composted",
+      "Synthetics can be recycled into insulation"
+    ],
+    "impact": "Textiles occupy 5% landfill space. Recycling saves 2700L water per cotton shirt"
+  },
+  "styrofoam": {
+    "category": "Recyclable (Special)",
+    "instructions": "1. 🧼 Clean and dry completely\n2. 📦 Break into pieces for storage\n3. 📍 Check VERY FEW facilities accept\n4. 🏢 Special polystyrene recycling only\n\n❌ Most municipalities don't accept - REDUCE use",
+    "tips": [
+      "Reuse for packaging if possible",
+      "Some shipping stores accept clean foam",
+      "Never burn - releases toxic fumes",
+      "Consider alternatives like paper packaging"
+    ],
+    "impact": "Non-biodegradable, occupies 30% landfill space. Recycling reduces petroleum consumption"
+  },
+  "light bulbs": {
+    "category": "Hazardous",
+    "instructions": "⚠️ HANDLE WITH CARE - glass breaks easily\n1. 💡 Identify type: LED, CFL, incandescent, halogen\n2. 📦 Wrap in paper for protection\n3. 🏪 Hardware stores often accept\n4. 🏢 Special e-waste facility for CFLs\n\n🔋 CFLs contain mercury - most hazardous",
+    "tips": [
+      "CFLs: most hazardous due to mercury",
+      "LEDs: longest lasting, least impact",
+      "Incandescent: least efficient but simple disposal",
+      "Store broken bulbs in sealed container"
+    ],
+    "impact": "CFL recycling prevents mercury pollution. LED recycling recovers rare earth elements"
+  }
+}
